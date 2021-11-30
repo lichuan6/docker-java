@@ -14,6 +14,11 @@ public class DemoApplication {
       return "Hello Docker World";
     }
 
+    @RequestMapping("/throw")
+    public String throwException() {
+        throw new RuntimeException("This is a test exception");
+    }
+
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
